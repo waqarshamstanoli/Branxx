@@ -1,29 +1,110 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import DashboardLayout from "../layouts/DashboardLayout";
+import UserProfileLayout from "../layouts/UserProfileLayout";
+// import Store from "@/store/store";
+// import {createRouter, createWebHistory} from "vue-router";
 
-Vue.use(VueRouter)
-
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
+  mode: "history",
+  routes: [
+    {
+      path: "/",
+      name: "Dashboard",
+      component: DashboardLayout,
+      props: true,
+      meta: {
+        requiresAuth: true,
+      },
+      children: [
+        {
+          path: "/",
+          name: "home",
+          component: () => import("../views/HomeView.vue"),
+        },
+        {
+          path: "/teachers",
+          name: "teachers",
+          component: () => import("../views/Teachers.vue"),
+        },
+        {
+          path: "/about",
+          name: "about",
+          component: () => import("../views/AboutView.vue"),
+        },
+        // {
+        //   path: "/submitProduct",
+        //   name: "submitProduct",
+        //   component: () => import("../views/SubmitProduct.vue"),
+        // },
+        // {
+        //   path: "/pricing",
+        //   name: "pricing",
+        //   component: () => import("../views/PricingView.vue"),
+        // },
+        // {
+        //   path: "/payment",
+        //   name: "payment",
+        //   component: () => import("../views/PaymentView.vue"),
+        // },
+      ],
+    },
+    // {
+    //   path: "/user",
+    //   name: "User",
+    //   component: UserProfileLayout,
+    //   props: true,
+    //   meta: {
+    //     requiresAuth: true,
+    //   },
+    //   children: [
+    //     {
+    //       path: "/user/updateProfile",
+    //       name: "updateProfile",
+    //       component: () => import("../views/UpdateProfile.vue"),
+    //       meta: {
+    //         requiresAuth: true,
+    //       },
+    //     },
+    //   ],
+    // },
+    // {
+    //   path: "/adminPanel",
+    //   name: "admin",
+    //   meta: {
+    //     needsAuth: true,
+    //   },
+    //   component: () => import("../views/AdminPanel.vue"),
+    // },
+  ],
+});
 
-export default router
+// const router = new VueRouter({
+//   mode: 'history',
+//   base: process.env.BASE_URL,
+//   routes
+// })
+
+router.beforeEach((to, from, next) => {
+  let isAuthenticated = false;
+  const admin = localStorage.getItem("roleAdmin");
+  console.log("router", to);
+  if (to.meta.needsAuth) {
+    if (admin) {
+      next();
+    } else {
+      next("/");
+    }
+  } 
+  else {
+    next();
+  }
+});
+
+// const router = new VueRouter({
+//   routes,
+// });
+
+export default router;
