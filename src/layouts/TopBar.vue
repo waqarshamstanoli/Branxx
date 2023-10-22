@@ -82,7 +82,31 @@
 
 
 
+<v-list-item link to="/about">
 
+<v-list-item-content>
+  <v-list-item-title
+    class=" text-left align-self-center"
+    >About</v-list-item-title
+  >
+</v-list-item-content>
+</v-list-item><v-list-item link to="/contact">
+
+<v-list-item-content>
+  <v-list-item-title
+    class=" text-left align-self-center"
+    >Contact</v-list-item-title
+  >
+</v-list-item-content>
+</v-list-item><v-list-item link to="/fee">
+
+<v-list-item-content>
+  <v-list-item-title
+    class=" text-left align-self-center"
+    >Fee Structure</v-list-item-title
+  >
+</v-list-item-content>
+</v-list-item>
 
 
 
