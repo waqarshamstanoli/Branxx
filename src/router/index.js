@@ -32,7 +32,17 @@ const router = new VueRouter({
         {
           path: "/about",
           name: "about",
-          component: () => import("../views/AboutView.vue"),
+          component: () => import("../views/AboutUs.vue"),
+        },
+        {
+          path: "/fee",
+          name: "fee",
+          component: () => import("../views/FeeStructure.vue"),
+        },
+        {
+          path: "/contact",
+          name: "contact",
+          component: () => import("../views/ContactUs.vue"),
         },
         // {
         //   path: "/submitProduct",

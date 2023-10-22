@@ -42,8 +42,10 @@
       </v-btn> -->
 
       <v-btn text class="mx-5 text-capitalize" to="/teachers">Teachers</v-btn>
+      <v-btn text class="mx-5 text-capitalize" to="/about">About Us</v-btn>
 
-      <v-btn text class="mx-5">Contact Us</v-btn>
+      <v-btn text class="mx-5 text-capitalize" to="/contact">Contact Us</v-btn>
+      <v-btn text class="mx-5 text-capitalize" to="/fee">Fee Structure</v-btn>
 
             <v-spacer></v-spacer>
 

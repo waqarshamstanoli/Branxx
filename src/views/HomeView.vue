@@ -18,7 +18,7 @@
    </v-row>
    </v-container>
   </v-img>
-<v-container>
+<v-container fluid>
  <v-row>
    <v-col cols="12" lg="4" md="6" sm="6" offset-lg="1">
      <v-img :src="require('../assets/1.jpg')" class="mt-16" width="500" lazy-load></v-img>
