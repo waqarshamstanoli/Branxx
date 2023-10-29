@@ -1,75 +1,160 @@
 <template>
-    <div>
-        <v-card>
-            Fee Structure
-At Quran Teaching, our mission is to make Quranic education accessible to all, and we are committed to
-providing transparent and affordable fee structures that cater to a wide range of learners. We offer a
-variety of options to ensure that you can choose the plan that best suits your needs.
+  <div>
+    <!-- <v-card width="300" height="600" class="pa-4 mt-12 mx-auto">
+      Fee Structure At Quran Teaching, our mission is to make Quranic education
+      accessible to all, and we are committed to providing transparent and
+      affordable fee structures that cater to a wide range of learners. We offer
+      a variety of options to ensure that you can choose the plan that best
+      suits your needs.
+    </v-card> -->
+    <v-row class="justify-center">
+      <v-col cols="12" lg="2" md="12" sm="12">
+        <v-card tile outlined width="300" height="600" class="pa-4 mt-12 mx-auto elevation-0">
+          <h2> Free Membership</h2>
+          <h3>$0</h3>
+          <v-list color="transparent">
+            
+            <v-list-item>
+              <v-list-item-content >
+                Access to introductory Quranic lessons and resources
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-content >
+                Ideal for exploring offerings before committing to a paid plan
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-content >
+                Participation in community discussions and forums
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+         
+          
+          <v-btn block rounded outlined color="#202842" class="text-capitalize">Subscribe</v-btn>
         </v-card>
-        <v-card>
-            1. Free Membership
- Cost: $0
+      </v-col>
+      <v-col cols="12" lg="2" md="12" sm="12">
+        <v-card tile outlined
+          width="300"
+          height="600"
+          color="#202842"
+          class="pa-4 mt-12 mx-auto"
+        >
+          <h2 class="white--text text-center">Basic Membership</h2>
+          <h3 class="white--text ml-8">$9.99/month</h3>
+          <v-list color="transparent">
+            <v-list-item>
+              <v-list-item-content class="white--text">
+                Access to a wider range of Quranic lessons and resources
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-content class="white--text">
+                Includes beginner and intermediate-level content
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-content class="white--text">
+                Suitable for those seeking a structured learning journey
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+          
+          <v-btn block rounded outlined color="#ffffff" class="text-capitalize">Subscribe</v-btn>
+        </v-card>
+      </v-col>
+      
+      <v-col cols="12" lg="2" md="12" sm="12">
+        <v-card tile outlined width="300" height="600" class="pa-4 mt-12 mx-auto">
+          <h2>Premium Membership</h2>
+          <h3>$19.99/month</h3>
+         
+          <v-list color="transparent">
+            <v-list-item>
+              <v-list-item-content>
+                Full access to all content offered by Quran Teaching
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-content>
+                Includes advanced courses and in-depth Quranic studies
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-content>
+                Suitable for those seeking a structured learning journey
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-content>
+                Access to exclusive learning materials
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+          <v-btn block rounded outlined color="#202842" class="text-capitalize">Subscribe</v-btn>
+        </v-card>
+      </v-col>
+      <v-col cols="12" lg="2" md="12" sm="12">
+        <v-card tile outlined width="300" height="600" class="pa-4 mt-12 mx-auto">
+          <h2>Family Plan</h2>
+          <h3> $29.99/month </h3>
 
- What's Included: Our free membership allows you to access a selection of introductory
-Quranic lessons and resources. It's perfect for those who want to explore our offerings before
-committing to a paid plan. You can also participate in community discussions and forums.
-        </v-card>
-        <v-card>
-            2. Basic Membership
- Cost: $9.99/month
- What's Included: With the Basic Membership, you'll have access to a wider range of
-Quranic lessons and resources, including beginner and intermediate-level content. This plan is
-suitable for those looking to embark on a structured learning journey.
-        </v-card>
-        <v-card>
-            3. Premium Membership
- Cost: $19.99/month
- What's Included: Our Premium Membership unlocks the full potential of Quran Teaching.
-You'll gain access to all of our content, including advanced courses and in-depth Quranic
-studies. Premium members can also participate in live webinars and access exclusive learning
-materials.
-        </v-card>
-        <v-card>
-            4. Family Plan
- Cost: $29.99/month
- What's Included: The Family Plan is designed for families or groups who want to learn
-together. It includes all the benefits of the Premium Membership and allows multiple users
-under a single account, making it a cost-effective option for families or study groups.
-        </v-card>
-<v-card>
-    5. One-Time Course Purchase
- Cost: Varies by course
- What's Included: If you prefer a more flexible approach, you can purchase individual
-courses separately. The cost will vary depending on the course you choose, and you'll have
-lifetime access to that specific course's materials.
-</v-card>
-<v-card>
-    Payment Methods
-We offer a variety of payment methods to make it convenient for you to subscribe to our services. You
-can pay using:
-</v-card>
-<v-card>
-    Get Started
-At Quran Teaching, our goal is to provide you with the highest quality Quranic education, regardless of
-your budget or circumstances. We are committed to helping you embark on a meaningful journey of
-Quranic learning. Choose the plan that suits you best, and start your learning adventure today.
-If you have any questions or need further assistance regarding our fee structure, please don't hesitate to
-contact our customer support team at support@quranteachingwebsite.com. We're here to help you on
-your path to Quranic knowledge and understanding.
-</v-card>
 
-<v-card></v-card>
-<v-card></v-card>
-        
-    </div>
+
+<v-list color="transparent">
+            <v-list-item>
+              <v-list-item-content >
+                Family Plan Benefits:
+Designed for families or groups interested in learning together
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-content >
+                Includes all the benefits of the Premium Membership
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-content >
+                Allows multiple users under a single account
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-content >
+                Cost-effective option for families or study groups
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+          <v-btn block rounded outlined color="#202842" class="text-capitalize">Subscribe</v-btn>
+        </v-card>
+      </v-col>
+       </v-row
+    >
+    <!-- <v-row>
+     
+     
+      
+      <v-col cols="12" lg="2" md="12" sm="12">
+        <v-card width="300" height="600" class="pa-4 mt-12 mx-auto">
+          Get Started At Quran Teaching, our goal is to provide you with the
+          highest quality Quranic education, regardless of your budget or
+          circumstances. We are committed to helping you embark on a meaningful
+          journey of Quranic learning. Choose the plan that suits you best, and
+          start your learning adventure today. If you have any questions or need
+          further assistance regarding our fee structure, please don't hesitate
+          to contact our customer support team at
+          support@quranteachingwebsite.com. We're here to help you on your path
+          to Quranic knowledge and understanding.
+        </v-card>
+      </v-col>
+    </v-row> -->
+  </div>
 </template>
 <script>
 export default {
-    data() {
-        return {
-
-        }
-        
-    },
-}
+  data() {
+    return {};
+  },
+};
 </script>

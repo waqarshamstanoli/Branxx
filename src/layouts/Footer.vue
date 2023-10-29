@@ -4,6 +4,7 @@
       <v-container>
         <v-row>
           <v-col cols="12" lg="4" md="12" sm="12">
+            <v-card width="80%" class=" elevation-0 mx-auto">
             <v-toolbar-title class="pl-0 ml-0">
               <v-img
                 :src="require('../assets/logo.png')"
@@ -29,17 +30,21 @@
             <v-btn tile class="white--text ml-auto accent text-capitalize"
               >Submit</v-btn
             >
+          </v-card>
           </v-col>
           <v-col cols="12" lg="4" md="6" sm="6">
-            <h3 class="mt-16 font-weight-medium ml-14">Services Link</h3>
+            <v-card width="80%" class=" elevation-0 mx-auto">
+            
             <v-list dense color="transparent" class="ml-10">
               <v-list-item v-for="item in items" :key="item" :to="item.to" link>
                 <v-list-item-title>{{ item.title }}</v-list-item-title>
               </v-list-item>
             </v-list>
+          </v-card>
           </v-col>
 
           <v-col cols="12" lg="4" md="12" sm="12">
+            <v-card width="80%" class=" elevation-0 mx-auto">
             <h3 class="mt-16 font-weight-medium ml-4">Information</h3>
             <v-list dense color="transparent">
               <v-list-item class="mb-0">
@@ -70,13 +75,17 @@
                 </v-list-item-title></v-list-item
               >
             </v-list>
-            <v-icon color="accent" class="ml-3">mdi-facebook</v-icon>
+            <a href="https://www.facebook.com/profile.php?id=100006899089188" target="_blank">
+              <v-icon color="accent" class="ml-3 cursor">mdi-facebook</v-icon>
+            </a>
+            
             <v-icon color="accent" class="mx-1">mdi-twitter</v-icon>
 
             <v-icon color="accent" class="mx-1">mdi-google-plus</v-icon>
 
             <v-icon color="accent" class="mx-1">mdi-pinterest</v-icon>
             <v-icon color="accent" class="mx-1">mdi-instagram</v-icon>
+          </v-card>
           </v-col>
         </v-row>
       </v-container>
@@ -101,4 +110,8 @@ export default {
   }
 };
 </script>
-<style lang=""></style>
+<style >
+.cursor{
+  cursor: pointer;
+}
+</style>

@@ -8,7 +8,7 @@
      <v-col cols="12" lg="6" offset-lg="6">
        <div class="box" color="transparent">
 <!-- <h1 class="white--text">Quran Courses for everyone</h1> -->
-<h1 class="white--text">
+<h1 class="white--text text-h3 text-md-h1 font-md-weight-black ">
   The best of you are those who learn the Quran and teach it 
 </h1>
 <h6 class="white--text"> Ṣaḥīḥ al-Bukhārī 5027</h6>
@@ -104,12 +104,11 @@ Once you’ve chosen the teachers and subjects you prefer, you can register for 
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    
   }
 }
 </script>
